@@ -4,3 +4,4 @@ all programs listed here
 1.Find Pivot index
 2.running sum of 1d arrays
 3.Binary search of an array
+4. first bad version
