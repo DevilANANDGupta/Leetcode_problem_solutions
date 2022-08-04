@@ -5,3 +5,4 @@ all programs listed here
 2.running sum of 1d arrays
 3.Binary search of an array
 4. first bad version
+5.search insert position
