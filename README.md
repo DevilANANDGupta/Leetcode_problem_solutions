@@ -6,3 +6,4 @@ all programs listed here
 3.Binary search of an array
 4. first bad version
 5.search insert position
+6.Isomporhic String
