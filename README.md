@@ -7,3 +7,4 @@ all programs listed here
 4. first bad version
 5.search insert position
 6.Isomporhic String
+7.Is Subsequence
