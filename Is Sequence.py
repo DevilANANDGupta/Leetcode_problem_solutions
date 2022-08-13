@@ -14,3 +14,4 @@ class Solution:
                 return False
             j+=1
         return True
+ 
