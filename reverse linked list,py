@@ -1,0 +1,22 @@
+class Solution:
+    def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+        # Recursion approach:
+        #     take head and reverse list whose head is head.next
+        #     then reversely assign the link between them
+
+        if head == None or head.next == None:
+            return head
+
+        n = head.next
+        h = self.reverseList(n)
+
+        # reverse link
+        head.next = None
+        n.next = head
+
+        return h
