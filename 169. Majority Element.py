@@ -58,3 +58,31 @@ class Solution(object):
             if count>n:
                 return num
             num = nums[i]
+
+#             2nd method for complexity 
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+      #time complexity is n(logn)
+        count = 0
+        m=0
+        for i in range(len(nums)):
+                if count ==0:
+                    m=nums[i]
+                    count+=1
+                else:
+                    if m==nums[i]:
+                        count+=1
+                    else:
+                        count-=1
+            # print(m)
+        for i in range(len(nums)):
+            if nums[i]==m:
+                count+=1
+        if count>(len(nums)//2):
+                return m
+        else:
+            return None
