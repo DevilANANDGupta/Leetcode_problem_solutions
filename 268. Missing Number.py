@@ -41,4 +41,22 @@ class Solution:
         for i in range (len(nums)+1):
             if i not in nums:
                 return i
+# third method by xor function to reduce time complexity
+# xor function work as if same number is formed then it will be zero if different number will form then it will not zero thats why we return that value
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+    #initialize value
+        x1=0
+        x2=0
+        for i in range(len(nums)+1):
+            x1=x1^i
+        for i in range(len(nums)):
+            x2=x2^nums[i]
+        return x1^x2
+            
+        
         
