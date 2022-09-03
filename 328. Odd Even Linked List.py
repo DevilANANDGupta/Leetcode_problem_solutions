@@ -27,21 +27,21 @@ Output: [2,3,6,7,1,5,4]'''
 #         self.val = val
 #         self.next = next
 class Solution:
-    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if not head or head.next or not head.next.next:
-            return head 
-        oddptr = current = head 
-        evenptr =evenhead = head.next
-        i = 1
-        while current:
-            if i > 2 and i % 2 != 0:
-                oddptr.next = current
-                oddptr = oddptr.next
-            elif i>2 and i%2 == 0:
-                evenptr.next = current
-                eventptr  = evenptr.next
-            curret = current.next
-            i += 1
-        evenptr.next = None
-        oddptr.next = evenhead
-        return head
+    def oddEvenList(self, head: ListNode) -> ListNode:
+        odd_head = ListNode(0)
+        odd = odd_head
+        even_head = ListNode(0)
+        even = even_head
+        count = 0
+        while head != None:
+            if count % 2 == 0:
+                odd.next = head
+                odd = head
+            else:
+                even.next = head
+                even = head
+            count += 1
+            head = head.next
+        even.next = None
+        odd.next = even_head.next
+        return odd_head.next
