@@ -29,7 +29,6 @@ class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         m,n = len(s),len(p)
         DP = [[False for j in range(n+1)] for i in range(m+1)]  
-        
         DP[0][0] = True
         
         for i in range(m+1):
